@@ -1,4 +1,7 @@
-const Login = () => {
+import Button from "../Elements/Button/button";
+import InputForm from "../Elements/Input";
+
+const FormLogin = () => {
   return (
     <div>
       <div className="bg-slate-800 border border-slate-700 rounded-md p-8 shadow-lg backdrop-filter backdrop-blur-lg bg-opacity-25 relative ">
@@ -34,17 +37,13 @@ const Login = () => {
               Password
             </label>
           </div>
-
-          <button
-            type="submit"
-            className="w-full text-white text-lg font-medium rounded bg-blue-500 py-2 mt-4 hover:bg-blue-700 transition-colors duration-300"
-          >
+          <Button type="submit" className="w-full">
             Login
-          </button>
+          </Button>
         </form>
       </div>
     </div>
   );
 };
 
-export default Login;
+export default FormLogin;
