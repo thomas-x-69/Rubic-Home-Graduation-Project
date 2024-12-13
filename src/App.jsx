@@ -1,10 +1,13 @@
 import "./App.css";
-
+import Login from "./components/Login/Login";
 function App() {
   return (
-    <>
-      <h1 className="text-3xl font-bold text-red-600 ">Hello Rubic's Users</h1>
-    </>
+    <div
+      className="text-white h-[100vh] flex items-center justify-center bg-cover"
+      style={{ backgroundImage: "url('../src/assets/Rubic Login.jpg')" }}
+    >
+      <Login />
+    </div>
   );
 }
 
