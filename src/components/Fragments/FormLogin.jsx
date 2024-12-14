@@ -1,10 +1,9 @@
 import Button from "../Elements/Button/button";
-import InputForm from "../Elements/Input";
 
 const FormLogin = () => {
   return (
     <div>
-      <div className="bg-slate-800 border border-slate-700 rounded-md p-8 shadow-lg backdrop-filter backdrop-blur-lg bg-opacity-25 relative ">
+      <div className="bg-slate-800 border border-slate-700 rounded-md p-8 shadow-lg backdrop-filter backdrop-blur-lg bg-opacity-25 relative">
         <h1 className="text-4xl font-bold text-center">Login</h1>
         <form action="">
           <div className="relative my-6">
@@ -17,7 +16,7 @@ const FormLogin = () => {
             />
             <label
               htmlFor="username"
-              className="absolute left-0 top-0 text-gray-400 text-sm transition-all duration-300 peer-placeholder-shown:top-2.5 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:top-0 peer-focus:text-sm peer-focus:text-blue-600"
+              className="absolute left-0 top-0 text-gray-400 text-sm transition-all duration-300 peer-placeholder-shown:top-2.5 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:top-[-10px] peer-focus:text-sm peer-focus:text-blue-600"
             >
               Username
             </label>
@@ -32,7 +31,7 @@ const FormLogin = () => {
             />
             <label
               htmlFor="password"
-              className="absolute left-0 top-0 text-gray-400 text-sm transition-all duration-300 peer-placeholder-shown:top-2.5 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:top-0 peer-focus:text-sm peer-focus:text-blue-600"
+              className="absolute left-0 top-0 text-gray-400 text-sm transition-all duration-300 peer-placeholder-shown:top-2.5 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:top-[-10px] peer-focus:text-sm peer-focus:text-blue-600"
             >
               Password
             </label>
