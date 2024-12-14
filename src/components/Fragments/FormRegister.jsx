@@ -1,7 +1,26 @@
+import React from "react";
 import Button from "../Elements/Button/button";
 import InputForm from "../Elements/Input";
+import { useNavigate } from "react-router-dom";
 
 const FormRegister = () => {
+  const navigate = useNavigate();
+
+  const handleRegister = (event) => {
+    event.preventDefault();
+
+    const formData = new FormData(event.target);
+    const user = {
+      fullname: formData.get("fullname"),
+      email: formData.get("email"),
+      password: formData.get("password"),
+    };
+
+    localStorage.setItem("user", JSON.stringify(user));
+
+    navigate("/");
+  };
+
   return (
     <div
       className="min-h-screen w-full absolute inset-0 bg-cover bg-center bg-no-repeat flex items-center justify-center"
@@ -11,11 +30,11 @@ const FormRegister = () => {
         <h1 className="text-4xl font-bold text-center text-white mb-8 tracking-wider">
           Register
         </h1>
-        <form className="space-y-6">
+        <form className="space-y-6" onSubmit={handleRegister}>
           <InputForm
             title="Full Name"
             name="fullname"
-            placeholder="Insert your name here"
+            placeholder="Enter your name here"
             type="text"
             className="mb-4 text-white"
             labelClassName="text-white"
@@ -23,7 +42,7 @@ const FormRegister = () => {
           <InputForm
             title="Email"
             name="email"
-            placeholder="Insert your email here"
+            placeholder="Enter your email here"
             type="email"
             className="mb-4 text-white"
             labelClassName="text-white"
@@ -31,7 +50,7 @@ const FormRegister = () => {
           <InputForm
             title="Password"
             name="password"
-            placeholder="***********"
+            placeholder="********"
             type="password"
             className="mb-4 text-white"
             labelClassName="text-white"
@@ -39,7 +58,7 @@ const FormRegister = () => {
           <InputForm
             title="Confirm Password"
             name="confirmpassword"
-            placeholder="**********"
+            placeholder="********"
             type="password"
             className="mb-4 text-white"
             labelClassName="text-white"
